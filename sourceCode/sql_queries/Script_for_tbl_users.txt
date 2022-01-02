@@ -1,0 +1,45 @@
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+
+START TRANSACTION;
+SET time_zone = "+00:00"
+
+--
+-- Database: `attendance`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_users`
+--
+
+CREATE TABLE `tbl_users` (
+  `user_id` int(11) NOT NULL,
+  `user_group_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email_id` varchar(255) NOT NULL,
+  `mobile` varchar(120) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `rfid_uid` varchar(20) NOT NULL,
+  `user_type` tinyint(1) NOT NULL DEFAULT '1' COMMENT '1=>employee 2=>employer',
+  `is_pending` tinyint(1) NOT NULL DEFAULT '1',
+  `image` blob NOT NULL,
+  `joining_date` datetime NOT NULL,
+  `delflag` tinyint(1) NOT NULL DEFAULT '0',
+  `created` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+--
+-- Indexes for table `tbl_users`
+--
+ALTER TABLE `tbl_users`
+  ADD PRIMARY KEY (`user_id`);
+
+--
+-- AUTO_INCREMENT for table `tbl_users`
+--
+ALTER TABLE `tbl_users`
+	MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+COMMIT;
