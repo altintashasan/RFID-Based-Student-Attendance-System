@@ -23,6 +23,8 @@ The RFID system is used to save students' attendance system. It reads the data p
 
 Following components, languages and frameworks are used for this project.
 
+![image](https://user-images.githubusercontent.com/68166794/147889329-4b598a1b-9f82-4160-829c-089cb1608e01.png)
+
 # Components
 * Arduino Uno
 * RFID RC522
